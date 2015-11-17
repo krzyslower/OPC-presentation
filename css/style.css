@@ -1,0 +1,331 @@
+/*
+
+RESET
+
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-size: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+
+/* 
+
+Grid styles by Matthew Reidsma : Based on Nicole Sullivan's OOCSS grids 
+http://gvsulib.com/ui/#lib-grid
+
+*/
+
+
+.line{overflow:hidden;*overflow:visible;*zoom:1;clear:both;}
+.span1{width:99%;}
+.span2,.span3,.span4,.span2of3,.span3of4{width:99%;}
+.unit{padding:.5em 0;}
+.left,
+.right{float:none;}
+/* Begin erase */
+.size1of1{float:none;width:99%;}
+.size1of2,.size1of4,.size3of4 {width:100%;}
+.size1of3,.size2of3{width:100%;}
+/* End erase */
+
+@media screen and (min-width: 450px) {
+.span4{width:49%;padding:.5em 1% .5em 0;}	
+.left{float:left;}
+.right{float:right;}
+}
+
+@media screen and (min-width:550px) {
+.span3{width:32%;padding:.5em 1% .5em 0;}
+.span2of3{width:65%;padding:.5em 1% .5em 0;}
+
+
+/* Begin erase */
+.size1of4,.size1of4{width:49%;}	
+.size1of3{width:32%;}
+.size2of3{width:65%;}
+/* End erase */
+}
+
+@media screen and (min-width:900px) {
+
+.span2{width:49%;padding:.5em 1% .5em 0;}
+.span4{width:24%;}
+.span3of4{width:74%;padding:.5em 1% .5em 0;}
+
+/* Begin erase */
+.size1of2{width:49%;}
+.size1of4{width:24%;}
+.size3of4{width:74%;}
+/* End erase */
+}
+
+
+
+/*
+
+LAYOUT
+
+*/
+
+html, body {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.container {
+	width: 55%;
+	margin: 0 auto;
+}
+
+
+header {
+
+}
+
+
+nav {
+
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li a {
+	display: block;
+	text-decoration: none;
+}
+
+.toggle, .close, .reset {
+	cursor:pointer;
+}
+
+section:last-child {
+	margin-bottom: 2em;
+}
+
+section.target {
+	background-color: #fff;
+	margin-bottom: 1em 0 .5em 0;
+}
+
+section.left.span2 > section.target {
+	margin-bottom: 1em 0 5em 0;
+}
+
+
+
+/*
+
+TYPOGRAPHY
+
+*/
+
+body {
+	font-weight: normal;
+	font-family: sans-serif;
+	letter-spacing:.05em;
+	font-size: 1em;
+	background-color: #f5f8fa;
+}
+
+h1 {
+	font-size: 3em;
+	text-transform: uppercase;
+	color: #dbdbdb;
+	letter-spacing: .1em;
+	border-left: 8px solid #fff;
+	padding-left:.25em;
+	margin: 1em 0;
+}
+
+h1:hover {
+	border-left: 8px solid #f15a29;
+}
+
+h2 {
+	font-size: 2.4em;
+	font-style: italic;
+	text-transform: lowercase;
+	color: #f15a29;
+	margin-bottom: 1em;
+}
+
+h3 {
+	font-size: 2em;
+	color: #dbdbdb;
+	border-left: 8px solid #fff;
+	padding-left:.25em;
+	margin: 0 0 .5em 0;
+}
+
+h3:hover {
+	border-left: 8px solid #f15a29;
+}
+
+h4 {
+	text-transform: uppercase;
+	margin: 1em;
+	line-height: 1.6em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+	margin: 0 1em 1em 4em;
+	font-size: .9em;
+	line-height: 1.25em;
+}
+
+p.indent {
+	margin-left:6em;
+	color: #f15a29;
+}
+
+p.indent:first {
+	margin-top:1em;
+}
+
+a {
+	color: #f15a29;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #f15a29;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+.close {
+	text-align: center;
+	color: #dbdbdb;
+	margin-bottom: 1em;
+	display:block;
+}
+
+.close:hover {
+	color: #f15a29;
+	text-decoration: none;
+}
+
+
+.span2:first > p.indent {
+	margin-left:3em;
+}
+
+
+/*
+
+HEADER
+
+*/
+
+
+
+
+
+
+/*
+
+NAV
+
+*/
+
+
+
+
+
+/*
+
+FOOTER
+
+*/
+
+
+
+
+
+
+
+/* 
+
+ASIDE (personal bit)
+
+*/
+
+
+
+
+
+
+
+
+/*
+
+MOBILE
+
+*/
+
+@media screen and (max-device-width: 550px) {
+	.container {width:85%;}
+
+}
